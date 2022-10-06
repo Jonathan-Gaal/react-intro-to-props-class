@@ -1,5 +1,7 @@
 import User from "./User";
 import ProductPage from "./ProductPage";
+import Manufacturers from "./Manufacturers";
+
 import "./App.css";
 
 // App.js
@@ -14,6 +16,13 @@ const App = () => {
   };
 
   const { name, userId, email } = userDetails;
+  // placing state in the App.js component for more than one component to use is called 'Lifting State'
+  const products = [
+    { name: "Ultra Boost", manufacturer: "Adidas", price: 160 },
+    { name: "Air Force One Low", manufacturer: "Nike", price: 100 },
+    { name: "Classic Leather", manufacturer: "Reebok", price: 120 },
+    { name: "Sk8-Hi", manufacturer: "Vans", price: 60 },
+  ];
 
   return (
     <div>
@@ -21,7 +30,8 @@ const App = () => {
 
       {/* we give the prop a name then we assign it the value in order to pass info to the User component */}
       <User userEmail={email} userId={userId} fullName={name} />
-      <ProductPage />
+      <ProductPage appProducts={products} />
+      <Manufacturers manuProducts={products} />
     </div>
   );
 };

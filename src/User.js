@@ -12,7 +12,8 @@ const User = ({ fullName, userId, userEmail }) => {
 
   return (
     <div className="user-details">
-      <h1>Name: {fullName}</h1>
+      <h1>User Page</h1>
+      <h2>Name: {fullName}</h2>
       <p>Id: {userId}</p>
       <p>Email: {userEmail}</p>
     </div>
