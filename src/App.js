@@ -1,4 +1,5 @@
 import User from "./User";
+import ProductPage from "./ProductPage";
 import "./App.css";
 
 // App.js
@@ -20,6 +21,7 @@ const App = () => {
 
       {/* we give the prop a name then we assign it the value in order to pass info to the User component */}
       <User userEmail={email} userId={userId} fullName={name} />
+      <ProductPage />
     </div>
   );
 };
